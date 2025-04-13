@@ -144,7 +144,17 @@ public class SI2025Lab1Main {
         manager.addTask("Submit assignment", Priority.MEDIUM, "School");
         manager.addTask("Buy groceries", Priority.LOW, "Personal");
 
-<<<<<<< HEAD
+        manager.sortTasksByPriority();
+        manager.printTasks();
+
+
+        System.out.println("\nCompleted Tasks:");
+        for (Task t : manager.getCompletedTasks()) {
+            System.out.println(t);
+        }
+    }
+}
+
 
 
 
