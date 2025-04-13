@@ -152,8 +152,6 @@ public class SI2025Lab1Main {
         for (Task t : manager.getCompletedTasks()) {
             System.out.println(t);
         }
-    }
-}
 
 
 
@@ -163,15 +161,10 @@ public class SI2025Lab1Main {
 
 
 
-        // MISSING: Calls to the new methods that will be implemented
-
-        System.out.println("\nCompleted Tasks:");
-        for (Task t : manager.getCompletedTasks()) {
+        System.out.println("\nMost Urgent (Highest Priority, Not Completed) Tasks:");
+        for (Task t : manager.getMostUrgentTasks()) {
             System.out.println(t);
         }
-=======
-        manager.sortTasksByPriority();
-        manager.printTasks();
->>>>>>> 2-sort-tasks-by-priority
+
     }
 }
