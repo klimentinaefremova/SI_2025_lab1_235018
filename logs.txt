@@ -1,0 +1,22 @@
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git log --oneline --graph --all
+* 375b492 (HEAD -> master, origin/master) Marging the third branch
+| * 4cd2086 (3-find-the-highest-priority-unfinished-task) Adjusting before merging with master
+| * ed31803 Implemented functions
+|/
+* 1be2a75 Marging of 1 and 2
+*   7076ab4 After merge of master and 1
+|\
+| * 5db05f8 (origin/2-sort-tasks-by-priority, 2-sort-tasks-by-priority) Implemented functions
+| * 67a3d59 Implemented functions
+* | 374d887 Edited SI2025Lab1Main.java to make the merge possible
+* | 91e7a02 (origin/1-find-all-completed-tasks, 1-find-all-completed-tasks) Implemented functions
+|/
+| * 971d827 (origin/3-find-the-highest-priority-unfinished-task) Adjusting before merging with master
+| * 1e8b441 Implemented functions
+| * 722fa0e Implemented functions
+|/
+* 66b937f Add starter code
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$

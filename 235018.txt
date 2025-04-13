@@ -1,0 +1,806 @@
+//  Klimentina Efremova     235018
+
+
+
+//  Updating the local repo
+//  Користејќи git fetch командата, ги превземаме сите промени на одлаеченото репо и ги применуваме на локалното
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git fetch origin
+From https://github.com/klimentinaefremova/SI_2025_lab1_235018
+ * [new branch]      1-find-all-completed-tasks -> origin/1-find-all-completed-tasks
+ * [new branch]      2-sort-tasks-by-priority -> origin/2-sort-tasks-by-priority
+ * [new branch]      3-find-the-highest-priority-unfinished-task -> origin/3-find-the-highest-priority-unfinished-task
+
+
+
+
+//  Experimenting and learning
+//  Имав некои проблеми додека не сватив дека фајлот вистински се менува додека менувам гранки, 
+//  па треба при менување на гранка да го отворам одново фајлот за да ги направам потребните измени. 
+//  Тука добро ќе беше при имплементирање на фунциите да користев git checkout -b, за да може на сите гранки
+//  да се имплементираат функциите и да ги менувам само повиците на функции 
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ checkout 1-find-all-completed-tasks
+bash: checkout: command not found
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git checkout 1-find-all-completed-tasks
+Switched to a new branch '1-find-all-completed-tasks'
+branch '1-find-all-completed-tasks' set up to track 'origin/1-find-all-completed-tasks'.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (1-find-all-completed-tasks)
+$ git commit -m "Implemented functions"
+On branch 1-find-all-completed-tasks
+Your branch is up to date with 'origin/1-find-all-completed-tasks'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SI2025Lab1Main.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (1-find-all-completed-tasks)
+$ add SI2025Lab1Main.java
+bash: add: command not found
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (1-find-all-completed-tasks)
+$ git add SI2025Lab1Main.java
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (1-find-all-completed-tasks)
+$ git checkout 2-sort-tasks-by-priority
+Switched to a new branch '2-sort-tasks-by-priority'
+M       SI2025Lab1Main.java
+branch '2-sort-tasks-by-priority' set up to track 'origin/2-sort-tasks-by-priority'.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git add SI2025Lab1Main.java
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git checkout 3-find-the-highest-priority-unfinished-task
+Switched to a new branch '3-find-the-highest-priority-unfinished-task'
+M       SI2025Lab1Main.java
+branch '3-find-the-highest-priority-unfinished-task' set up to track 'origin/3-find-the-highest-priority-unfinished-task'.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task)
+$ git add SI2025Lab1Main.java
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task)
+$ git commit -m "Implemented functions"
+[3-find-the-highest-priority-unfinished-task 722fa0e] Implemented functions
+ 1 file changed, 30 insertions(+), 5 deletions(-)
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task)
+$ git checkout 2-sort-tasks-by-priority
+Switched to branch '2-sort-tasks-by-priority'
+Your branch is up to date with 'origin/2-sort-tasks-by-priority'.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git commit -m "Implemented functions"
+On branch 2-sort-tasks-by-priority
+Your branch is up to date with 'origin/2-sort-tasks-by-priority'.
+
+nothing to commit, working tree clean
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git checkout 1-find-all-completed-tasks
+Switched to branch '1-find-all-completed-tasks'
+Your branch is up to date with 'origin/1-find-all-completed-tasks'.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (1-find-all-completed-tasks)
+$ git push origin
+Everything up-to-date
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (1-find-all-completed-tasks)
+$ git add SI2025Lab1Main.java
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (1-find-all-completed-tasks)
+$ git commit -m "Implemented functions"
+On branch 1-find-all-completed-tasks
+Your branch is up to date with 'origin/1-find-all-completed-tasks'.
+
+nothing to commit, working tree clean
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (1-find-all-completed-tasks)
+$ git push origin
+Everything up-to-date
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (1-find-all-completed-tasks)
+$ git checkout 2-sort-tasks-by-priority
+Switched to branch '2-sort-tasks-by-priority'
+Your branch is up to date with 'origin/2-sort-tasks-by-priority'.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git add SI2025Lab1Main.java
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git commit -m "Implemented functions"
+On branch 2-sort-tasks-by-priority
+Your branch is up to date with 'origin/2-sort-tasks-by-priority'.
+
+nothing to commit, working tree clean
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git push origin
+Everything up-to-date
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git log
+commit 66b937fe41c5025fc2def3073097362452e5f5ac (HEAD -> 2-sort-tasks-by-priority, origin/master, origin/3-find-the-highest-priority-unfinished-task, origin/2-sort-tasks-by-priority, origin/1-find-all-completed-tasks, master, 1-find-all-completed-tasks)
+Author: Klimentina Efremova <klimentina08642@gmail.com>
+Date:   Sun Apr 13 16:58:58 2025 +0200
+
+    Add starter code
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git checkout 3-find-the-highest-priority-unfinished-task
+Switched to branch '3-find-the-highest-priority-unfinished-task'
+Your branch is ahead of 'origin/3-find-the-highest-priority-unfinished-task' by 1 commit.
+  (use "git push" to publish your local commits)
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task)
+$ git add SI2025Lab1Main.java
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task)
+$ git commit -m "Implemented functions"
+On branch 3-find-the-highest-priority-unfinished-task
+Your branch is ahead of 'origin/3-find-the-highest-priority-unfinished-task' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task)
+$ git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 632 bytes | 632.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/klimentinaefremova/SI_2025_lab1_235018.git
+   66b937f..722fa0e  3-find-the-highest-priority-unfinished-task -> 3-find-the-highest-priority-unfinished-task
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task)
+$ git log
+commit 722fa0ec81655d1a775ba5bad88f72f22e19fc1c (HEAD -> 3-find-the-highest-priority-unfinished-task, origin/3-find-the-highest-priority-unfinished-task)
+Author: Klimentina Efremova <klimentina08642@gmail.com>
+Date:   Sun Apr 13 19:39:07 2025 +0200
+
+    Implemented functions
+
+commit 66b937fe41c5025fc2def3073097362452e5f5ac (origin/master, origin/2-sort-tasks-by-priority, origin/1-find-all-completed-tasks, master, 2-sort-tasks-by-priority, 1-find-all-completed-tasks)
+Author: Klimentina Efremova <klimentina08642@gmail.com>
+Date:   Sun Apr 13 16:58:58 2025 +0200
+
+    Add starter code
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task)
+$ git status
+On branch 3-find-the-highest-priority-unfinished-task
+Your branch is up to date with 'origin/3-find-the-highest-priority-unfinished-task'.
+
+nothing to commit, working tree clean
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task)
+$ git checkout 2-sort-tasks-by-priority
+Switched to branch '2-sort-tasks-by-priority'
+Your branch is up to date with 'origin/2-sort-tasks-by-priority'.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git add SI2025Lab1Main.java
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git commit -m "Implemented functions"
+On branch 2-sort-tasks-by-priority
+Your branch is up to date with 'origin/2-sort-tasks-by-priority'.
+
+nothing to commit, working tree clean
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git status
+On branch 2-sort-tasks-by-priority
+Your branch is up to date with 'origin/2-sort-tasks-by-priority'.
+
+nothing to commit, working tree clean
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git status
+On branch 2-sort-tasks-by-priority
+Your branch is up to date with 'origin/2-sort-tasks-by-priority'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SI2025Lab1Main.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git add SI2025Lab1Main.java
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git commit -m "Implemented functions"
+[2-sort-tasks-by-priority 67a3d59] Implemented functions
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 317 bytes | 158.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/klimentinaefremova/SI_2025_lab1_235018.git
+   66b937f..67a3d59  2-sort-tasks-by-priority -> 2-sort-tasks-by-priority
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Implementing functions and calling function for branch 3
+// Отвораме една гранка со git checkout `nameOfBranch` . Го отвораме фајлот и ги вршиме промените. 
+// ги зачувуваме промените со git add `fileName` . Правиме commit на фајлот со соодветна порака преку командата
+// git commit -m "Message" . Го пуштаме комитот кон origin со git push командата.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git checkout 3-find-the-highest-priority-unfinished-task
+Switched to branch '3-find-the-highest-priority-unfinished-task'
+Your branch is up to date with 'origin/3-find-the-highest-priority-unfinished-task'.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task)
+$ git add SI2025Lab1Main.java
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task)
+$ git commit -m "Implemented functions"
+[3-find-the-highest-priority-unfinished-task 1e8b441] Implemented functions
+ 1 file changed, 14 insertions(+), 3 deletions(-)
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task)
+$ git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 422 bytes | 211.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/klimentinaefremova/SI_2025_lab1_235018.git
+   722fa0e..1e8b441  3-find-the-highest-priority-unfinished-task -> 3-find-the-highest-priority-unfinished-task
+
+
+
+
+// Implementing functions and calling function for branch 1
+
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task)
+$ git checkout 1-find-all-completed-tasks
+Switched to branch '1-find-all-completed-tasks'
+Your branch is up to date with 'origin/1-find-all-completed-tasks'.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (1-find-all-completed-tasks)
+$ git add SI2025Lab1Main.java
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (1-find-all-completed-tasks)
+$ git commit -m "Implemented functions"
+[1-find-all-completed-tasks 91e7a02] Implemented functions
+ 1 file changed, 34 insertions(+), 6 deletions(-)
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (1-find-all-completed-tasks)
+$ git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 680 bytes | 680.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/klimentinaefremova/SI_2025_lab1_235018.git
+   66b937f..91e7a02  1-find-all-completed-tasks -> 1-find-all-completed-tasks
+
+
+// Implementing functions and calling function for branch 2
+
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (1-find-all-completed-tasks)
+$ git checkout 2-sort-tasks-by-priority
+Switched to branch '2-sort-tasks-by-priority'
+Your branch is up to date with 'origin/2-sort-tasks-by-priority'.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git add SI2025Lab1Main.java
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git commit -m "Implemented functions"
+[2-sort-tasks-by-priority 5db05f8] Implemented functions
+ 1 file changed, 30 insertions(+), 6 deletions(-)
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 637 bytes | 212.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/klimentinaefremova/SI_2025_lab1_235018.git
+   67a3d59..5db05f8  2-sort-tasks-by-priority -> 2-sort-tasks-by-priority
+
+
+//    Merging
+//	Се поставуваме на master гранката со цел таму да биде крајниот резултат од спојувањето на гранките
+//	master и 1 кое го вршиме со командата git merge.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git merge
+Already up to date.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git fetch origin
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git pull origin master
+From https://github.com/klimentinaefremova/SI_2025_lab1_235018
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git merge 1-find-all-completed-tasks
+Updating 66b937f..91e7a02
+Fast-forward
+ SI2025Lab1Main.java | 40 ++++++++++++++++++++++++++++++++++------
+ 1 file changed, 34 insertions(+), 6 deletions(-)
+
+
+
+
+
+
+//   Simply trial and fail
+
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git merge 3-find-the-highest-priority-unfinished-task
+Auto-merging SI2025Lab1Main.java
+CONFLICT (content): Merge conflict in SI2025Lab1Main.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master|MERGING)
+$ git commit -m "Merged master with 1"
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+U       SI2025Lab1Main.java
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master|MERGING)
+$ git checkout 3-find-the-highest-priority-unfinished-task
+error: you need to resolve your current index first
+SI2025Lab1Main.java: needs merge
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master|MERGING)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   SI2025Lab1Main.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master|MERGING)
+$ git merge --abort
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git add SI2025Lab1Main.java
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git commit -m "Edited SI2025Lab1Main.java to make the merge possible"
+[master 374d887] Edited SI2025Lab1Main.java to make the merge possible
+ 1 file changed, 8 insertions(+)
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git merge 2-sort-tasks-by-priority
+Auto-merging SI2025Lab1Main.java
+CONFLICT (content): Merge conflict in SI2025Lab1Main.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master|MERGING)
+$ git merge --abort
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 328 bytes | 164.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/klimentinaefremova/SI_2025_lab1_235018.git
+   66b937f..374d887  master -> master
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git log
+commit 374d887d5660ddb33084f78c0e6091162b9c37a9 (HEAD -> master, origin/master)
+Author: Klimentina Efremova <klimentina08642@gmail.com>
+Date:   Sun Apr 13 20:20:13 2025 +0200
+
+    Edited SI2025Lab1Main.java to make the merge possible
+
+commit 91e7a028896a596978c5f45cf3f906b6243fe7c4 (origin/1-find-all-completed-tasks, 1-find-all-completed-tasks)
+Author: Klimentina Efremova <klimentina08642@gmail.com>
+Date:   Sun Apr 13 20:00:39 2025 +0200
+
+    Implemented functions
+
+commit 66b937fe41c5025fc2def3073097362452e5f5ac
+Author: Klimentina Efremova <klimentina08642@gmail.com>
+Date:   Sun Apr 13 16:58:58 2025 +0200
+
+    Add starter code
+
+
+
+
+
+
+
+
+
+// Merging 1 and 2
+
+
+
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git checkout 2-sort-tasks-by-priority
+Switched to branch '2-sort-tasks-by-priority'
+Your branch is up to date with 'origin/2-sort-tasks-by-priority'.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (2-sort-tasks-by-priority)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git merge 2-sort-tasks-by-priority
+Auto-merging SI2025Lab1Main.java
+CONFLICT (content): Merge conflict in SI2025Lab1Main.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master|MERGING)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   SI2025Lab1Main.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master|MERGING)
+$ git add SI2025Lab1Main.java
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master|MERGING)
+$ git commit -m "After merge of master and 1"
+[master 7076ab4] After merge of master and 1
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git push origin
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 421 bytes | 210.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/klimentinaefremova/SI_2025_lab1_235018.git
+   374d887..7076ab4  master -> master
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git merge 2-sort-tasks-by-priority
+Already up to date.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git add SI2025Lab1Main.java
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git commit -m "Marging of 1 and 2"
+[master 1be2a75] Marging of 1 and 2
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 320 bytes | 160.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/klimentinaefremova/SI_2025_lab1_235018.git
+   7076ab4..1be2a75  master -> master
+
+
+
+
+
+// Prepearing to merge number 3
+// тука само во кодот додадов повеќе нови редови со цел 3 да може да се спои со master без проблем
+
+
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git checkout 3-find-the-highest-priority-unfinished-task
+Switched to branch '3-find-the-highest-priority-unfinished-task'
+Your branch is up to date with 'origin/3-find-the-highest-priority-unfinished-task'.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Disable this message with "git config advice.addEmptyPathspec false"
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task)
+$ git add SI2025Lab1Main.java
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task)
+$ git commit -m "Adjusting before merging with master"
+[3-find-the-highest-priority-unfinished-task 971d827] Adjusting before merging with master
+ 1 file changed, 27 insertions(+)
+
+
+
+
+
+// Mess-Ups
+
+
+
+
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git merge 3-find-the-highest-priority-unfinished-task
+Auto-merging SI2025Lab1Main.java
+CONFLICT (content): Merge conflict in SI2025Lab1Main.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master|MERGING)
+$ git merge --abort
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git checkout 3-find-the-highest-priority-unfinished-task
+Switched to branch '3-find-the-highest-priority-unfinished-task'
+Your branch is ahead of 'origin/3-find-the-highest-priority-unfinished-task' by 1 commit.
+  (use "git push" to publish your local commits)
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task)
+$ git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 316 bytes | 158.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/klimentinaefremova/SI_2025_lab1_235018.git
+   1e8b441..971d827  3-find-the-highest-priority-unfinished-task -> 3-find-the-highest-priority-unfinished-task
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git merge 3-find-the-highest-priority-unfinished-task
+Auto-merging SI2025Lab1Main.java
+CONFLICT (content): Merge conflict in SI2025Lab1Main.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master|MERGING)
+$ git merge --abort
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git merge 3-find-the-highest-priority-unfinished-task
+Auto-merging SI2025Lab1Main.java
+CONFLICT (content): Merge conflict in SI2025Lab1Main.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master|MERGING)
+$ git merge --abort
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git checkout master
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+
+
+
+
+
+
+//  Merging third branch
+//  Се одлучив да ја спојам третата гранка со помош на командата git rebase бидејќи разликите кои ги имаше
+//  третата гранка во споредба со master можеа само да се додадат на крајот на фајлот - а тоа е начинот на кој 
+//  што работи rebase
+
+
+
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git checkout 3-find-the-highest-priority-unfinished-task
+Switched to branch '3-find-the-highest-priority-unfinished-task'
+Your branch is up to date with 'origin/3-find-the-highest-priority-unfinished-task'.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task)
+$ git rebase master
+dropping 722fa0ec81655d1a775ba5bad88f72f22e19fc1c Implemented functions -- patch contents already upstream
+Auto-merging SI2025Lab1Main.java
+CONFLICT (content): Merge conflict in SI2025Lab1Main.java
+error: could not apply 1e8b441... Implemented functions
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+hint: Disable this message with "git config advice.mergeConflict false"
+Could not apply 1e8b441... Implemented functions
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task|REBASE 2/3)
+$ git add SI2025Lab1Main.java
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task|REBASE 2/3)
+$ git rebase master
+fatal: It seems that there is already a rebase-merge directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+        git rebase (--continue | --abort | --skip)
+If that is not the case, please
+        rm -fr ".git/rebase-merge"
+and run me again.  I am stopping in case you still have something
+valuable there.
+
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task|REBASE 2/3)
+$ git rebase --continue
+hint: Waiting for your editor to close the file...       0 [sig] bash 2232! sigpacket::process: Suppressing signal 18 to win32 process (pid 1276)
+                                                                                                                                                 63360073 [sig] bash 2232! sigpacket::process: Suppressing signal 18 to win32 process (pid 1276)
+[detached HEAD ed31803] Implemented functions
+ 1 file changed, 18 insertions(+), 1 deletion(-)
+Successfully rebased and updated refs/heads/3-find-the-highest-priority-unfinished-task.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (3-find-the-highest-priority-unfinished-task)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git add SI2025Lab1Main.java
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git commit -m "Marging the third branch"
+[master 375b492] Marging the third branch
+ 1 file changed, 3 insertions(+), 10 deletions(-)
+
+
+
+
+
+// Syncronizing with remote repsidory
+
+
+
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 373 bytes | 373.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/klimentinaefremova/SI_2025_lab1_235018.git
+   1be2a75..375b492  master -> master
+
+
+
+
+
+
+
+//   LOGS
+//   I konw they are a mess, please have mercy <3
+
+
+
+
+User@DESKTOP-QBI57V3 MINGW64 ~/SI_2025_Lab1_235018 (master)
+$ git log --oneline --graph --all
+* 375b492 (HEAD -> master, origin/master) Marging the third branch
+| * 4cd2086 (3-find-the-highest-priority-unfinished-task) Adjusting before merging with master
+| * ed31803 Implemented functions
+|/
+* 1be2a75 Marging of 1 and 2
+*   7076ab4 After merge of master and 1
+|\
+| * 5db05f8 (origin/2-sort-tasks-by-priority, 2-sort-tasks-by-priority) Implemented functions
+| * 67a3d59 Implemented functions
+* | 374d887 Edited SI2025Lab1Main.java to make the merge possible
+* | 91e7a02 (origin/1-find-all-completed-tasks, 1-find-all-completed-tasks) Implemented functions
+|/
+| * 971d827 (origin/3-find-the-highest-priority-unfinished-task) Adjusting before merging with master
+| * 1e8b441 Implemented functions
+| * 722fa0e Implemented functions
+|/
+* 66b937f Add starter code
+
+
+
+
+
+
+
+
+
+
