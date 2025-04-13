@@ -85,7 +85,7 @@ class TaskManager {
 
     // 4. Sort tasks by priority
     public void sortTasksByPriority() {
-        tasks.sort(Comparator.comparing(Task::getPriority));
+        tasks.sort(Comparator.comparing(Task::getPriority).reversed());
     }
 
     // 5. Filter tasks by category
@@ -144,8 +144,19 @@ public class SI2025Lab1Main {
         manager.addTask("Submit assignment", Priority.MEDIUM, "School");
         manager.addTask("Buy groceries", Priority.LOW, "Personal");
 
-        // MISSING: Calls to the new methods that will be implemented
 
-        manager.printTasks();
+
+
+
+
+
+
+
+
+        System.out.println("\nMost Urgent (Highest Priority, Not Completed) Tasks:");
+        for (Task t : manager.getMostUrgentTasks()) {
+            System.out.println(t);
+        }
+     //   manager.printTasks();
     }
 }
