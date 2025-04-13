@@ -80,7 +80,7 @@ class TaskManager {
 
     // 3. List tasks sorted by name
     public void sortTasksByName() {
-        // TODO: Implement sorting logic
+        tasks.sort(Comparator.comparing(Task::getPriority));c
     }
 
     // 4. Sort tasks by priority
@@ -144,6 +144,7 @@ public class SI2025Lab1Main {
         manager.addTask("Submit assignment", Priority.MEDIUM, "School");
         manager.addTask("Buy groceries", Priority.LOW, "Personal");
 
+<<<<<<< HEAD
 
 
 
@@ -158,5 +159,9 @@ public class SI2025Lab1Main {
         for (Task t : manager.getCompletedTasks()) {
             System.out.println(t);
         }
+=======
+        manager.sortTasksByPriority();
+        manager.printTasks();
+>>>>>>> 2-sort-tasks-by-priority
     }
 }
